@@ -1,0 +1,136 @@
+body {
+    margin: 0px;
+}
+
+.img-logo {
+    width: 170px;
+}
+
+.rodape {
+	text-align: center;
+}
+
+.img-contato {
+    width: 40px;
+}
+
+.categorias {
+    display: block;
+    margin-left: 60px;
+    float: left;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.categorias li:hover {
+    color: #bdb3b5;
+    cursor: pointer;
+}
+
+.produtos {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 150px;
+    
+}
+
+.box-produto {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.box-produto:hover {
+    box-shadow: 0px 0px 14px 0px #8080804d;
+    cursor: pointer;
+}
+
+.modal-nome-produto {
+    font-size: 20px;
+}
+
+.antigo-preco, .modal-antigo-preco {
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+
+.modal-box-produto {
+    text-align: center;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal1 {
+    width: 480px;
+    height: 550px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.664);
+    border-radius: 4px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    font-size: 35px;
+    color: #b81a1a;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn, .comprar-btn {
+    border-radius:5px;
+    border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	padding:12px 23px;
+    text-decoration:none;
+    width: 25%;
+}
+
+.order-form {
+    text-align: center;
+    background-color: white;
+    font-size: 17px;
+    width: 480px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.466);
+    border-radius: 4px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0px 50px 0px;
+}
+
+.confirmacao-pedido {
+    text-align: center;
+    background-color: white;
+    font-size: 17px;
+    width: 480px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.466);
+    border-radius: 4px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0px 50px 0px;
+}
