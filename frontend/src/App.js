@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Inicial from './paginas/Inicial';
 import Produtos from './paginas/Produtos';
 import Contato from './paginas/Contato';
 import Lojas from './paginas/Lojas';
 import Pedido from './paginas/Pedido';
 import ConfirmacaoPedido from './paginas/ConfirmaPedido';
+import loading from './images/loading.png';
+
+const Header = lazy(() => import('./components/Header'));
+const Footer = lazy(() => import('./components/Footer'));
 
 export default function App() {
   return (
     <Router>
       <div>
-        <Header />
+        <Suspense fallback={ <img src={loading} className="loadingImagem" alt="Carrregando" /> }>
+          <Header />
+        </Suspense>
 
         <Switch>
           <Route path="/Produtos">
@@ -40,7 +44,10 @@ export default function App() {
           </Route>
         </Switch>
 
-        <Footer />
+        <Suspense fallback={ <img src={loading} className="loadingImagem" alt="Carrregando" /> }>
+          <Footer />
+        </Suspense>
+        
       </div>
     </Router>
   );

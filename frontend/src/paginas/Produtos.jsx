@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
-import Produto from '../components/Produto';
 import Imagem from '../components/Imagem';
 import { withRouter } from 'react-router-dom';
 import { cliqueCategoria } from '../store/actions/categoriasActions'
 import { selecionarProduto} from '../store/actions/produtoSelecionadoActions'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+import loading from '../images/loading.png';
+
+const Produto = lazy(() => import('../components/Produto'));
 
 class Produtos extends Component {
     constructor(props) {
@@ -60,9 +62,13 @@ class Produtos extends Component {
                                 </ul>
                             </aside>
                         </Col>
-                        <Col sm={12} md={8} lg={9}>
-                            {produtosFiltrados.map(produto => <Produto onClick={() => this.handleOpen(produto)} produto={produto} key={produto.idproduto} />)}
-                        </Col>
+                        
+                        <Suspense fallback={ <img src={loading} className="loadingImagem" alt="Carregando" /> }>
+                            <Col sm={12} md={8} lg={9}>
+                                {produtosFiltrados.map(produto => <Produto onClick={() => this.handleOpen(produto)} produto={produto} key={produto.idproduto} />)}
+                            </Col>
+                        </Suspense>
+                        
                     </Row>
                 </Container>
 
