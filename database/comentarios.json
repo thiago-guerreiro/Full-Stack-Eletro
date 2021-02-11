@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "602467d215a66c04103dfa4f"
+  },
+  "email": "maria@gmail.com",
+  "nome_cliente": "Maria",
+  "mensagem": "Ótimos produtos e chegam rápido"
+},{
+  "_id": {
+    "$oid": "6024681615a66c04103dfa50"
+  },
+  "email": "jose@outlook.com",
+  "nome_cliente": "José",
+  "mensagem": "Os melhores preços da internet"
+},{
+  "_id": {
+    "$oid": "6024686f15a66c04103dfa51"
+  },
+  "email": "ana@email.com",
+  "nome_cliente": "Ana",
+  "mensagem": "A melhor loja de produtos eletrônicos"
+},{
+  "_id": {
+    "$oid": "6024689215a66c04103dfa52"
+  },
+  "email": "joao@hotmail.com",
+  "nome_cliente": "João",
+  "mensagem": "Produtos excelentes, recomendo!"
+}]
